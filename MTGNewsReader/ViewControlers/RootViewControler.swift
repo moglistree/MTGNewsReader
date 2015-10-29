@@ -32,10 +32,14 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
             responseParser.parse(data!)
             
             self.items = responseParser.data
+            
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
             })
         }
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44.0
         
         task.resume()
         
