@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -32,9 +33,75 @@
                     <view key="view" contentMode="scaleToFill" id="Z1d-RN-KOh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ikm-Gr-WtR">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CHFBFeedCell" id="Lbw-sW-mm5" customClass="CHFBFeedCell" customModule="MTGNewsReader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lbw-sW-mm5" id="OJU-2B-u5P">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIG-cb-13A">
+                                                    <rect key="frame" x="12" y="11" width="576" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lIG-cb-13A" firstAttribute="top" secondItem="OJU-2B-u5P" secondAttribute="top" constant="11" id="8up-Nd-Vxf"/>
+                                                <constraint firstItem="lIG-cb-13A" firstAttribute="leading" secondItem="OJU-2B-u5P" secondAttribute="leadingMargin" constant="12" id="C8h-ke-1zf"/>
+                                                <constraint firstAttribute="trailing" secondItem="lIG-cb-13A" secondAttribute="trailing" constant="12" id="RFZ-Mz-0A8"/>
+                                                <constraint firstItem="lIG-cb-13A" firstAttribute="top" secondItem="OJU-2B-u5P" secondAttribute="topMargin" constant="3" id="TCI-6p-fYe"/>
+                                                <constraint firstItem="lIG-cb-13A" firstAttribute="leading" secondItem="OJU-2B-u5P" secondAttribute="leading" constant="12" id="YpC-an-y5L"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lIG-cb-13A" secondAttribute="trailing" constant="12" id="ZVE-9r-fHw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lIG-cb-13A" secondAttribute="bottom" constant="3" id="sfJ-LH-ozj"/>
+                                                <constraint firstAttribute="bottom" secondItem="lIG-cb-13A" secondAttribute="bottom" constant="11" id="z7q-px-sWa"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="C8h-ke-1zf"/>
+                                                    <exclude reference="TCI-6p-fYe"/>
+                                                    <exclude reference="ZVE-9r-fHw"/>
+                                                    <exclude reference="sfJ-LH-ozj"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="lIG-cb-13A" id="cM3-Ci-bpU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0mj-K1-oXS" id="Wtn-HM-N2k"/>
+                                    <outlet property="delegate" destination="0mj-K1-oXS" id="F6o-mh-tnm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ikm-Gr-WtR" firstAttribute="leading" secondItem="Z1d-RN-KOh" secondAttribute="leading" id="5kB-7z-stj"/>
+                            <constraint firstItem="ikm-Gr-WtR" firstAttribute="leading" secondItem="Z1d-RN-KOh" secondAttribute="leadingMargin" id="8eo-ZR-4JR"/>
+                            <constraint firstItem="ikm-Gr-WtR" firstAttribute="top" secondItem="YoO-Ui-Qze" secondAttribute="bottom" id="fHm-Jr-IEI"/>
+                            <constraint firstAttribute="trailing" secondItem="ikm-Gr-WtR" secondAttribute="trailing" id="ib3-Jq-M4a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ikm-Gr-WtR" secondAttribute="trailing" id="vQA-CV-JqH"/>
+                            <constraint firstItem="duI-cG-qfF" firstAttribute="top" secondItem="ikm-Gr-WtR" secondAttribute="bottom" id="yNl-g4-mhD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8eo-ZR-4JR"/>
+                                <exclude reference="vQA-CV-JqH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="sjL-Ye-EdW"/>
+                    <connections>
+                        <outlet property="tableView" destination="ikm-Gr-WtR" id="NpJ-Wr-7oa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLI-Ql-Ue7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
