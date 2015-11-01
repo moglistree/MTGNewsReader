@@ -17,10 +17,10 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
     let SCGFeed : NSURL = NSURL(string: "http://www.starcitygames.com/rss/rssfeed.xml")!
     
     var items : Array<CHFBItem> = Array()
+    var selectedItem : CHFBItem? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(CHFBFeed) {(data, response, error) in
             if data == nil {
@@ -56,6 +56,30 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.object = items[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        selectedItem = items[indexPath.row]
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        self.performSegueWithIdentifier("showArticle", sender: self)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let segueIdentifier : String = segue.identifier!
+        
+        if (segueIdentifier == "showArticle")
+        {
+            let vc = segue.destinationViewController as! ArticleViewController
+            vc.item = selectedItem
+        }
+        
+        selectedItem = nil
+        
     }
     
 }

@@ -39,13 +39,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CHFBFeedCell" id="Lbw-sW-mm5" customClass="CHFBFeedCell" customModule="MTGNewsReader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lbw-sW-mm5" id="OJU-2B-u5P">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIG-cb-13A">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIG-cb-13A">
                                                     <rect key="frame" x="12" y="11" width="576" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -102,11 +102,55 @@
                     <navigationItem key="navigationItem" id="sjL-Ye-EdW"/>
                     <connections>
                         <outlet property="tableView" destination="ikm-Gr-WtR" id="NpJ-Wr-7oa"/>
+                        <segue destination="Kgn-qO-eoY" kind="push" identifier="showArticle" id="Gv3-J2-07s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLI-Ql-Ue7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399" y="43"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="ZsB-0v-lKf">
+            <objects>
+                <viewController id="Kgn-qO-eoY" customClass="ArticleViewController" customModule="MTGNewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aFq-QO-YsW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Akw-Fs-UeM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v5M-5D-nc6">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-LZ-rzT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0hN-LZ-rzT" firstAttribute="top" secondItem="aFq-QO-YsW" secondAttribute="bottom" id="HGf-9U-DVc"/>
+                            <constraint firstItem="Akw-Fs-UeM" firstAttribute="top" secondItem="0hN-LZ-rzT" secondAttribute="bottom" id="HlB-fw-JgA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0hN-LZ-rzT" secondAttribute="trailing" id="UIx-Bx-Mqw"/>
+                            <constraint firstItem="0hN-LZ-rzT" firstAttribute="leading" secondItem="v5M-5D-nc6" secondAttribute="leadingMargin" id="i0c-jq-deT"/>
+                            <constraint firstAttribute="trailing" secondItem="0hN-LZ-rzT" secondAttribute="trailing" id="stf-N2-iLT"/>
+                            <constraint firstItem="0hN-LZ-rzT" firstAttribute="leading" secondItem="v5M-5D-nc6" secondAttribute="leading" id="t3h-MF-Pnj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UIx-Bx-Mqw"/>
+                                <exclude reference="i0c-jq-deT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="z1Q-hy-zrr"/>
+                    <connections>
+                        <outlet property="webView" destination="0hN-LZ-rzT" id="5z4-Lm-4cK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62Y-xz-QO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="43"/>
         </scene>
     </scenes>
 </document>
