@@ -13,6 +13,8 @@ class CHFBFeedCell: UITableViewCell {
     var object :CHFBItem! {
         didSet {
             lblTitle.text = object.title
+            lblCreator.text = object.creator
+            lblDescription.text = object.desc
         }
     }
     
