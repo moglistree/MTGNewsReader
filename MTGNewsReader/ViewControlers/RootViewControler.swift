@@ -22,6 +22,36 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getCHFBData()
+        
+        getSCGData()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44.0
+        
+    }
+    
+    func getSCGData(){
+        let task = NSURLSession.sharedSession().dataTaskWithURL(SCGFeed) {(data, response, error) in
+            if data == nil {
+                print("dataTaskWithRequest error: \(error)")
+                return
+            }
+            
+            let responseParser = SCGXMLParser()
+            responseParser.parse(data!)
+            
+            self.items += responseParser.data
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
+        }
+        
+        task.resume()
+    }
+    
+    func getCHFBData() {
         let task = NSURLSession.sharedSession().dataTaskWithURL(CHFBFeed) {(data, response, error) in
             if data == nil {
                 print("dataTaskWithRequest error: \(error)")
@@ -31,18 +61,14 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
             let responseParser = CHFBXMLParser()
             responseParser.parse(data!)
             
-            self.items = responseParser.data
+            self.items += responseParser.data
             
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
             })
         }
         
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 44.0
-        
         task.resume()
-        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

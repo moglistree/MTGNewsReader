@@ -1,15 +1,15 @@
 //
-//  CHFBXMLParser.swift
+//  SCGXMLParser.swift
 //  MTGNewsReader
 //
-//  Created by Martin on 10/28/15.
+//  Created by Martin on 11/2/15.
 //  Copyright © 2015 Martin. All rights reserved.
 //
 
 import UIKit
 
-class CHFBXMLParser: NSObject, NSXMLParserDelegate {
-    
+class SCGXMLParser: NSObject, NSXMLParserDelegate {
+
     let item : String = "item"
     // item values
     let title : String = "title"
@@ -39,7 +39,7 @@ class CHFBXMLParser: NSObject, NSXMLParserDelegate {
     }
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-
+        
         element = elementName
         
         if elementName == item {
@@ -54,7 +54,7 @@ class CHFBXMLParser: NSObject, NSXMLParserDelegate {
     
     func parser(parser: NSXMLParser, foundCharacters string: String) {
         
-        if string == "\n\t\t" || string == "\n\t\t\t" || string == "\n\t\t\t\t"{
+        if string == "\n            "{
             return
         }
         

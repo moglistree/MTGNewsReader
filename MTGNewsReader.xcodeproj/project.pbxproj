@@ -14,6 +14,7 @@
 		5B176F9A1BE15E7000E3953C /* RootViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B176F991BE15E7000E3953C /* RootViewControler.swift */; };
 		5B176F9D1BE162EC00E3953C /* CHFBXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */; };
 		5B4FB2B41BE6BE1A00CF8DD7 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FB2B31BE6BE1A00CF8DD7 /* ArticleViewController.swift */; };
+		5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */; settings = {ASSET_TAGS = (); }; };
 		5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */; };
 		5BFCCB1D1BE2C3C10000EA69 /* CHFBFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB1C1BE2C3C10000EA69 /* CHFBFeedCell.swift */; };
 		5E04167E680E4722EC3C3A7A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CA5C3E9E676245A685E099 /* libPods.a */; };
@@ -31,6 +32,7 @@
 		5B176F991BE15E7000E3953C /* RootViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewControler.swift; path = ViewControlers/RootViewControler.swift; sourceTree = "<group>"; };
 		5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBXMLParser.swift; path = Libs/CHFBXMLParser.swift; sourceTree = "<group>"; };
 		5B4FB2B31BE6BE1A00CF8DD7 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleViewController.swift; path = ViewControlers/ArticleViewController.swift; sourceTree = "<group>"; };
+		5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGXMLParser.swift; path = Libs/SCGXMLParser.swift; sourceTree = "<group>"; };
 		5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBItem.swift; path = Models/CHFBItem.swift; sourceTree = "<group>"; };
 		5BFCCB1C1BE2C3C10000EA69 /* CHFBFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBFeedCell.swift; path = "Custom Views/CHFBFeedCell.swift"; sourceTree = "<group>"; };
 		6566AF7BF357074D4827EA1A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */,
+				5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */,
 			);
 			name = XMLParsers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				5B4FB2B41BE6BE1A00CF8DD7 /* ArticleViewController.swift in Sources */,
 				5B176F9A1BE15E7000E3953C /* RootViewControler.swift in Sources */,
 				5B176F9D1BE162EC00E3953C /* CHFBXMLParser.swift in Sources */,
+				5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */,
 				5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */,
 				5BFCCB1D1BE2C3C10000EA69 /* CHFBFeedCell.swift in Sources */,
 			);
