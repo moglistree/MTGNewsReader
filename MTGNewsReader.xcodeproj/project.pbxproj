@@ -102,9 +102,17 @@
 		5B176F9B1BE162C800E3953C /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */,
+				5BDEBA361BE78FA900C0FDC9 /* XMLParsers */,
 			);
 			name = Libs;
+			sourceTree = "<group>";
+		};
+		5BDEBA361BE78FA900C0FDC9 /* XMLParsers */ = {
+			isa = PBXGroup;
+			children = (
+				5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */,
+			);
+			name = XMLParsers;
 			sourceTree = "<group>";
 		};
 		5BFCCB1A1BE2B8E00000EA69 /* Models */ = {
@@ -356,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MTGNewsReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reader.MTGNewsReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MTGNewsReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reader.MTGNewsReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";

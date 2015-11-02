@@ -14,12 +14,30 @@ class CHFBFeedCell: UITableViewCell {
         didSet {
             lblTitle.text = object.title
             lblCreator.text = object.creator
-            lblDescription.text = object.desc
+            lblDescription.text = getAtributedString(fromHtml: object.desc)
         }
     }
     
     @IBOutlet weak var lblTitle : UILabel!
     @IBOutlet weak var lblCreator : UILabel!
     @IBOutlet weak var lblDescription : UILabel!
+    
+    func getAtributedString(fromHtml html: String) -> String{
+        let encodedData = html.dataUsingEncoding(NSUTF8StringEncoding)!
+        let attributedOptions : [String: AnyObject] = [
+            NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+            NSCharacterEncodingDocumentAttribute: NSUTF8StringEncoding
+        ]
+        
+        do {
+           let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
+
+            return attributedString.string
+        } catch {
+            print(error)
+            return ""
+        }
+        
+    }
 
 }

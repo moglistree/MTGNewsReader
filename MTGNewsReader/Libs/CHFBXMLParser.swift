@@ -58,7 +58,7 @@ class CHFBXMLParser: NSObject, NSXMLParserDelegate {
     
     func parser(parser: NSXMLParser, foundCharacters string: String) {
         
-        if string == "\n\t\t" {
+        if string == "\n\t\t" || string == "\n\t\t\t" || string == "\n\t\t\t\t"{
             return
         }
         
