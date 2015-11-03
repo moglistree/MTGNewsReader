@@ -48,7 +48,7 @@ class TCGParser: NSObject, NSXMLParserDelegate {
     
     func parser(parser: NSXMLParser, foundCharacters string: String) {
         
-        if string == "\n            "{
+        if string == "      "{
             return
         }
         
