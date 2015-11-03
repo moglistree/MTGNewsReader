@@ -26,9 +26,31 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
         
         getSCGData()
         
+        getTCGData()
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
         
+    }
+    
+    func getTCGData(){
+        let task = NSURLSession.sharedSession().dataTaskWithURL(TCGFeed) {(data, response, error) in
+            if data == nil {
+                print("dataTaskWithRequest error: \(error)")
+                return
+            }
+            
+            let responseParser = TCGParser()
+            responseParser.parse(data!)
+            
+            self.items = self.items + responseParser.data.items
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
+        }
+        
+        task.resume()
     }
     
     func getSCGData(){

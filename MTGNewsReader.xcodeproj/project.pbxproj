@@ -18,6 +18,9 @@
 		5B76F0E61BE7F94B004998B7 /* CHFBChannell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0E51BE7F94B004998B7 /* CHFBChannell.swift */; };
 		5B76F0E81BE7FA66004998B7 /* DefaultFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */; };
 		5B76F0EB1BE80486004998B7 /* SCGChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0EA1BE80486004998B7 /* SCGChanell.swift */; };
+		5BBC4AC61BE95017001FFF5E /* TCGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4AC51BE95017001FFF5E /* TCGParser.swift */; };
+		5BBC4AC91BE9515C001FFF5E /* TCGItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4AC81BE9515C001FFF5E /* TCGItem.swift */; };
+		5BBC4ACB1BE95181001FFF5E /* TCGChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4ACA1BE95181001FFF5E /* TCGChanell.swift */; };
 		5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */; };
 		5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */; };
 		5BFCCB1D1BE2C3C10000EA69 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */; };
@@ -40,6 +43,9 @@
 		5B76F0E51BE7F94B004998B7 /* CHFBChannell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBChannell.swift; path = Models/CHFBChannell.swift; sourceTree = "<group>"; };
 		5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultFeedItem.swift; path = Models/DefaultFeedItem.swift; sourceTree = "<group>"; };
 		5B76F0EA1BE80486004998B7 /* SCGChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGChanell.swift; path = Models/SCGChanell.swift; sourceTree = "<group>"; };
+		5BBC4AC51BE95017001FFF5E /* TCGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCGParser.swift; path = Libs/TCGParser.swift; sourceTree = "<group>"; };
+		5BBC4AC81BE9515C001FFF5E /* TCGItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCGItem.swift; path = Models/TCGItem.swift; sourceTree = "<group>"; };
+		5BBC4ACA1BE95181001FFF5E /* TCGChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCGChanell.swift; path = Models/TCGChanell.swift; sourceTree = "<group>"; };
 		5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGXMLParser.swift; path = Libs/SCGXMLParser.swift; sourceTree = "<group>"; };
 		5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBItem.swift; path = Models/CHFBItem.swift; sourceTree = "<group>"; };
 		5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = "Custom Views/FeedCell.swift"; sourceTree = "<group>"; };
@@ -135,11 +141,29 @@
 			name = SCG;
 			sourceTree = "<group>";
 		};
+		5BBC4AC41BE94FAC001FFF5E /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */,
+			);
+			name = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		5BBC4AC71BE9512F001FFF5E /* TCG */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC4AC81BE9515C001FFF5E /* TCGItem.swift */,
+				5BBC4ACA1BE95181001FFF5E /* TCGChanell.swift */,
+			);
+			name = TCG;
+			sourceTree = "<group>";
+		};
 		5BDEBA361BE78FA900C0FDC9 /* XMLParsers */ = {
 			isa = PBXGroup;
 			children = (
 				5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */,
 				5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */,
+				5BBC4AC51BE95017001FFF5E /* TCGParser.swift */,
 			);
 			name = XMLParsers;
 			sourceTree = "<group>";
@@ -147,6 +171,7 @@
 		5BFCCB1A1BE2B8E00000EA69 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5BBC4AC71BE9512F001FFF5E /* TCG */,
 				5B76F0E91BE7FA6A004998B7 /* SCG */,
 				5B76F0E41BE7F933004998B7 /* CHFB */,
 				5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */,
@@ -157,7 +182,7 @@
 		5BFCCB1B1BE2C3870000EA69 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */,
+				5BBC4AC41BE94FAC001FFF5E /* UITableViewCells */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -283,10 +308,13 @@
 				5B176F9A1BE15E7000E3953C /* RootViewControler.swift in Sources */,
 				5B176F9D1BE162EC00E3953C /* CHFBXMLParser.swift in Sources */,
 				5B76F0E31BE7F830004998B7 /* SCGItem.swift in Sources */,
+				5BBC4AC91BE9515C001FFF5E /* TCGItem.swift in Sources */,
 				5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */,
 				5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */,
 				5B76F0EB1BE80486004998B7 /* SCGChanell.swift in Sources */,
+				5BBC4AC61BE95017001FFF5E /* TCGParser.swift in Sources */,
 				5B76F0E81BE7FA66004998B7 /* DefaultFeedItem.swift in Sources */,
+				5BBC4ACB1BE95181001FFF5E /* TCGChanell.swift in Sources */,
 				5BFCCB1D1BE2C3C10000EA69 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
