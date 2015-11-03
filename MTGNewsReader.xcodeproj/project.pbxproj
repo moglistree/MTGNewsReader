@@ -14,8 +14,13 @@
 		5B176F9A1BE15E7000E3953C /* RootViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B176F991BE15E7000E3953C /* RootViewControler.swift */; };
 		5B176F9D1BE162EC00E3953C /* CHFBXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */; };
 		5B4FB2B41BE6BE1A00CF8DD7 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FB2B31BE6BE1A00CF8DD7 /* ArticleViewController.swift */; };
+		5B76F0E31BE7F830004998B7 /* SCGItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0E21BE7F830004998B7 /* SCGItem.swift */; };
+		5B76F0E61BE7F94B004998B7 /* CHFBChannell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0E51BE7F94B004998B7 /* CHFBChannell.swift */; };
+		5B76F0E81BE7FA66004998B7 /* DefaultFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */; };
+		5B76F0EB1BE80486004998B7 /* SCGChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0EA1BE80486004998B7 /* SCGChanell.swift */; };
+		5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */; };
 		5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */; };
-		5BFCCB1D1BE2C3C10000EA69 /* CHFBFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB1C1BE2C3C10000EA69 /* CHFBFeedCell.swift */; };
+		5BFCCB1D1BE2C3C10000EA69 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */; };
 		5E04167E680E4722EC3C3A7A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CA5C3E9E676245A685E099 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +36,13 @@
 		5B176F991BE15E7000E3953C /* RootViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewControler.swift; path = ViewControlers/RootViewControler.swift; sourceTree = "<group>"; };
 		5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBXMLParser.swift; path = Libs/CHFBXMLParser.swift; sourceTree = "<group>"; };
 		5B4FB2B31BE6BE1A00CF8DD7 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleViewController.swift; path = ViewControlers/ArticleViewController.swift; sourceTree = "<group>"; };
+		5B76F0E21BE7F830004998B7 /* SCGItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGItem.swift; path = Models/SCGItem.swift; sourceTree = "<group>"; };
+		5B76F0E51BE7F94B004998B7 /* CHFBChannell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBChannell.swift; path = Models/CHFBChannell.swift; sourceTree = "<group>"; };
+		5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultFeedItem.swift; path = Models/DefaultFeedItem.swift; sourceTree = "<group>"; };
+		5B76F0EA1BE80486004998B7 /* SCGChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGChanell.swift; path = Models/SCGChanell.swift; sourceTree = "<group>"; };
+		5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGXMLParser.swift; path = Libs/SCGXMLParser.swift; sourceTree = "<group>"; };
 		5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBItem.swift; path = Models/CHFBItem.swift; sourceTree = "<group>"; };
-		5BFCCB1C1BE2C3C10000EA69 /* CHFBFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBFeedCell.swift; path = "Custom Views/CHFBFeedCell.swift"; sourceTree = "<group>"; };
+		5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = "Custom Views/FeedCell.swift"; sourceTree = "<group>"; };
 		6566AF7BF357074D4827EA1A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,15 +112,44 @@
 		5B176F9B1BE162C800E3953C /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */,
+				5BDEBA361BE78FA900C0FDC9 /* XMLParsers */,
 			);
 			name = Libs;
+			sourceTree = "<group>";
+		};
+		5B76F0E41BE7F933004998B7 /* CHFB */ = {
+			isa = PBXGroup;
+			children = (
+				5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */,
+				5B76F0E51BE7F94B004998B7 /* CHFBChannell.swift */,
+			);
+			name = CHFB;
+			sourceTree = "<group>";
+		};
+		5B76F0E91BE7FA6A004998B7 /* SCG */ = {
+			isa = PBXGroup;
+			children = (
+				5B76F0E21BE7F830004998B7 /* SCGItem.swift */,
+				5B76F0EA1BE80486004998B7 /* SCGChanell.swift */,
+			);
+			name = SCG;
+			sourceTree = "<group>";
+		};
+		5BDEBA361BE78FA900C0FDC9 /* XMLParsers */ = {
+			isa = PBXGroup;
+			children = (
+				5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */,
+				5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */,
+			);
+			name = XMLParsers;
 			sourceTree = "<group>";
 		};
 		5BFCCB1A1BE2B8E00000EA69 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */,
+				5B76F0E91BE7FA6A004998B7 /* SCG */,
+				5B76F0E41BE7F933004998B7 /* CHFB */,
+				5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -118,7 +157,7 @@
 		5BFCCB1B1BE2C3870000EA69 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				5BFCCB1C1BE2C3C10000EA69 /* CHFBFeedCell.swift */,
+				5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -239,11 +278,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B176F851BE15DEC00E3953C /* AppDelegate.swift in Sources */,
+				5B76F0E61BE7F94B004998B7 /* CHFBChannell.swift in Sources */,
 				5B4FB2B41BE6BE1A00CF8DD7 /* ArticleViewController.swift in Sources */,
 				5B176F9A1BE15E7000E3953C /* RootViewControler.swift in Sources */,
 				5B176F9D1BE162EC00E3953C /* CHFBXMLParser.swift in Sources */,
+				5B76F0E31BE7F830004998B7 /* SCGItem.swift in Sources */,
+				5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */,
 				5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */,
-				5BFCCB1D1BE2C3C10000EA69 /* CHFBFeedCell.swift in Sources */,
+				5B76F0EB1BE80486004998B7 /* SCGChanell.swift in Sources */,
+				5B76F0E81BE7FA66004998B7 /* DefaultFeedItem.swift in Sources */,
+				5BFCCB1D1BE2C3C10000EA69 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MTGNewsReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reader.MTGNewsReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MTGNewsReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reader.MTGNewsReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";

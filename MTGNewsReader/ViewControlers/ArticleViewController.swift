@@ -12,7 +12,7 @@ class ArticleViewController: UIViewController {
 
     @IBOutlet weak var webView : UIWebView!
     
-    var item : CHFBItem? = nil
+    var item : DefaultFeedItem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
