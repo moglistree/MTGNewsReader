@@ -15,6 +15,7 @@ class DefaultXMLParser: NSObject, NSXMLParserDelegate {
     let title : String = "title"
     let link : String = "link"
     let desc : String = "description"
+    let publicationDate : String = "pubDate"
     
     var element : String = ""
     
@@ -40,6 +41,10 @@ class DefaultXMLParser: NSObject, NSXMLParserDelegate {
         
         if element == desc {
             currentItem?.desc = (currentItem?.desc)! + string
+        }
+        
+        if element == publicationDate {
+            currentItem?.setPublictionDate(fromString: string)
         }
         
     }

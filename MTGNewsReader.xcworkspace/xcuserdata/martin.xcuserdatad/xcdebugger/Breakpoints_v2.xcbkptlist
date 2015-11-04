@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MTGNewsReader/Models/DefaultFeedItem.swift"
-            timestampString = "468340656.929856"
+            filePath = "MTGNewsReader/ViewControlers/RootViewControler.swift"
+            timestampString = "468341665.001358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "setPublictionDate(fromString:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getData()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

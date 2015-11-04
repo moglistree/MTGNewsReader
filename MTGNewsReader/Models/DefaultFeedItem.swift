@@ -24,6 +24,11 @@ class DefaultFeedItem: NSObject {
         
         self.publicatedDate = formater.dateFromString(stringDate)
         
+        if self.publicatedDate == nil {
+            formater.dateFormat = "EEE, d MM yyyy HH:mm:ss"
+            self.publicatedDate = formater.dateFromString(stringDate)
+        }
+        
     }
     
     func getPublicationDate() -> NSDate{

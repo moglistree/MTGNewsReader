@@ -21,7 +21,7 @@ class DataStore: NSObject {
         var allItems : [DefaultFeedItem] = []
         let notyfyMainThreadIfNeeded = ({() -> () in
             if scgFinished && tcgFinished && chfbFinished{
-                completionClosure(items: allItems)
+                completionClosure(items: self.sortItemsByDate(allItems))
             }
         })
         
@@ -42,6 +42,22 @@ class DataStore: NSObject {
             tcgFinished = true
             notyfyMainThreadIfNeeded()
         })
+    }
+    
+    private func sortItemsByDate(items : [DefaultFeedItem]) -> [DefaultFeedItem]{
+        let sortedItems : [DefaultFeedItem] = items.sort {
+            var isGreater = false
+            let fisrtDate : NSDate = ($0 as DefaultFeedItem).getPublicationDate()
+            let secondDate : NSDate = ($1 as DefaultFeedItem).getPublicationDate()
+            
+            if fisrtDate.compare(secondDate) == NSComparisonResult.OrderedDescending
+            {
+                isGreater = true
+            }
+            
+            return isGreater
+        }
+        return sortedItems
     }
     
     private func getData(fromUrl url : NSURL, andXmlParser responseParser: DefaultXMLParser , completionClosure : (items : [DefaultFeedItem]) -> ()){

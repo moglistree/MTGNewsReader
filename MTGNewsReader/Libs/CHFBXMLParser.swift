@@ -11,7 +11,6 @@ import UIKit
 class CHFBXMLParser: DefaultXMLParser{
     
     let comments : String = "comments"
-    let publicationDate : String = "pubDate"
     let creator : String = "dc:creator"
     let category : String = "category"
     let guid : String = "guid"
@@ -52,10 +51,6 @@ class CHFBXMLParser: DefaultXMLParser{
         
         if element == comments {
             (currentItem as! CHFBItem).commentsURL = (currentItem as! CHFBItem).commentsURL + string
-        }
-        
-        if element == publicationDate {
-            (currentItem as! CHFBItem).setPublictionDate(fromString: string)
         }
         
         if element == creator {
