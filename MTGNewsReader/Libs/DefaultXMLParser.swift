@@ -8,12 +8,42 @@
 
 import UIKit
 
-class DefaultXMLParser: NSObject {
-
+class DefaultXMLParser: NSObject, NSXMLParserDelegate {
+    
+    let item : String = "item"
+    // item values
+    let title : String = "title"
+    let link : String = "link"
+    let desc : String = "description"
+    
+    var element : String = ""
+    
+    var currentItem : DefaultFeedItem? = nil
+    
     var data : DefaultChanell? = nil
     
     func parse(response : NSData){
-    
+        let parser : NSXMLParser = NSXMLParser(data: response)
+        parser.delegate = self
+        parser.parse()
     }
+    
+    func parser(parser: NSXMLParser, foundCharacters string: String) {
+        
+        if element == title {
+            currentItem?.title = (currentItem?.title)! + string
+        }
+        
+        if element == link {
+            currentItem?.linkURL = (currentItem?.linkURL)! + string
+        }
+        
+        if element == desc {
+            currentItem?.desc = (currentItem?.desc)! + string
+        }
+        
+    }
+    
+
     
 }

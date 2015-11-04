@@ -8,24 +8,14 @@
 
 import UIKit
 
-class TCGXMLParser: DefaultXMLParser, NSXMLParserDelegate {
+class TCGXMLParser: DefaultXMLParser {
     
-    let item : String = "item"
-    // item values
-    let title : String = "title"
-    let link : String = "link"
-    let desc : String = "description"
     let creator : String = "author"
-    
-    var element : String = ""
-    
-    var currentItem : TCGItem? = nil
     
     override func parse(response : NSData){
         self.data = TCGChanell()
-        let parser : NSXMLParser = NSXMLParser(data: response)
-        parser.delegate = self
-        parser.parse()
+        
+        super.parse(response)
     }
     
     func parserDidStartDocument(parser: NSXMLParser) {
@@ -46,27 +36,17 @@ class TCGXMLParser: DefaultXMLParser, NSXMLParserDelegate {
         
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
+    override func parser(parser: NSXMLParser, foundCharacters string: String) {
         
         if string == "      "{
             return
         }
         
-        if element == title {
-            currentItem?.title = (currentItem?.title)! + string
-        }
-        
-        if element == link {
-            currentItem?.linkURL = (currentItem?.linkURL)! + string
-        }
-        
-        if element == desc {
-            currentItem?.desc = (currentItem?.desc)! + string
-        }
-        
         if element == creator {
             currentItem?.creator = (currentItem?.creator)! + string
         }
+        
+        super.parser(parser, foundCharacters: string)
         
     }
     
