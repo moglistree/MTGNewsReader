@@ -8,12 +8,16 @@
 
 import UIKit
 
-class CHFBFeedCell: UITableViewCell {
+class FeedCell: UITableViewCell {
 
-    var object :CHFBItem! {
+    var object : DefaultFeedItem! {
         didSet {
             lblTitle.text = object.title
-            lblCreator.text = object.creator
+            if object.creator != "" {
+                lblCreator.text = "By: " + object.creator
+            } else {
+                lblCreator.text = ""
+            }
             //lblDescription.attributedText = getAtributedString(fromHtml: object.desc)
         }
     }

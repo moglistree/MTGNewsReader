@@ -8,14 +8,9 @@
 
 import UIKit
 
-class CHFBItem: NSObject {
+class CHFBItem : DefaultFeedItem {
     
-    var title : String = ""
-    var linkURL : String = ""
     var commentsURL : String = ""
-    var publicatedDate : String = ""
-    var desc : String = ""
-    var creator : String = ""
     var categories : Array<String> = Array()
     
 }

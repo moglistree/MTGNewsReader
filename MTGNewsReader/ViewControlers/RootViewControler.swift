@@ -16,19 +16,53 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
     let TCGFeed : NSURL = NSURL(string: "http://www.tcgplayer.com/rss/rssfeed.xml")!
     let SCGFeed : NSURL = NSURL(string: "http://www.starcitygames.com/rss/rssfeed.xml")!
     
-    var items : Array<CHFBItem> = Array()
-    var selectedItem : CHFBItem? = nil
+    var items : [DefaultFeedItem] = []
+    var selectedItem : DefaultFeedItem? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        confgiTableView()
+        
+        getData()
+        
+    }
+    
+    func getData(){
         getCHFBData()
         
         getSCGData()
         
+        getTCGData()
+    }
+    
+    func confgiTableView(){
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
         
+        let refreshControll : UIRefreshControl = UIRefreshControl()
+        refreshControll.addTarget(self, action: Selector("getData"), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControll)
+    }
+    
+    func getTCGData(){
+        let task = NSURLSession.sharedSession().dataTaskWithURL(TCGFeed) {(data, response, error) in
+            if data == nil {
+                print("dataTaskWithRequest error: \(error)")
+                return
+            }
+            
+            let responseParser = TCGParser()
+            responseParser.parse(data!)
+            
+            self.items = self.items + responseParser.data.items
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
+        }
+        
+        task.resume()
     }
     
     func getSCGData(){
@@ -41,7 +75,7 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
             let responseParser = SCGXMLParser()
             responseParser.parse(data!)
             
-            self.items += responseParser.data
+            self.items = self.items + responseParser.data.items
             
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
@@ -61,7 +95,7 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
             let responseParser = CHFBXMLParser()
             responseParser.parse(data!)
             
-            self.items += responseParser.data
+            self.items = self.items + responseParser.data.items
             
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
@@ -77,9 +111,9 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("CHFBFeedCell") as! CHFBFeedCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell") as! FeedCell
         
-        cell.object = items[indexPath.row]
+        cell.object = self.items[indexPath.row]
         
         return cell
     }
