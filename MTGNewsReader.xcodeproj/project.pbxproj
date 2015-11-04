@@ -51,7 +51,7 @@
 		5BBC4ACA1BE95181001FFF5E /* TCGChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCGChanell.swift; path = Models/TCGChanell.swift; sourceTree = "<group>"; };
 		5BDA55961BEA328000B06A01 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = Libs/DataStore.swift; sourceTree = "<group>"; };
 		5BDA55981BEA3B5000B06A01 /* DefaultXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultXMLParser.swift; path = Libs/DefaultXMLParser.swift; sourceTree = "<group>"; };
-		5BDA559A1BEA3BF300B06A01 /* DefaultChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultChanell.swift; sourceTree = "<group>"; };
+		5BDA559A1BEA3BF300B06A01 /* DefaultChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultChanell.swift; path = Models/DefaultChanell.swift; sourceTree = "<group>"; };
 		5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGXMLParser.swift; path = Libs/SCGXMLParser.swift; sourceTree = "<group>"; };
 		5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBItem.swift; path = Models/CHFBItem.swift; sourceTree = "<group>"; };
 		5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = "Custom Views/FeedCell.swift"; sourceTree = "<group>"; };
