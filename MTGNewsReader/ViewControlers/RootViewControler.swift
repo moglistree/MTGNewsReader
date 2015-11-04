@@ -12,9 +12,7 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tableView : UITableView!
     
-    let CHFBFeed : NSURL = NSURL(string: "http://www.channelfireball.com/feed/")!
-    let TCGFeed : NSURL = NSURL(string: "http://www.tcgplayer.com/rss/rssfeed.xml")!
-    let SCGFeed : NSURL = NSURL(string: "http://www.starcitygames.com/rss/rssfeed.xml")!
+    var refreshControl:UIRefreshControl!
     
     var items : [DefaultFeedItem] = []
     var selectedItem : DefaultFeedItem? = nil
@@ -29,81 +27,25 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func getData(){
-        getCHFBData()
-        
-        getSCGData()
-        
-        getTCGData()
+        let dataStore = DataStore();
+        dataStore.getHomeScreenData { (items) -> () in
+            self.items = items
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            })
+        }
     }
     
     func confgiTableView(){
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
         
-        let refreshControll : UIRefreshControl = UIRefreshControl()
-        refreshControll.addTarget(self, action: Selector("getData"), forControlEvents: UIControlEvents.ValueChanged)
-        tableView.addSubview(refreshControll)
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: Selector("getData"), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
     }
     
-    func getTCGData(){
-        let task = NSURLSession.sharedSession().dataTaskWithURL(TCGFeed) {(data, response, error) in
-            if data == nil {
-                print("dataTaskWithRequest error: \(error)")
-                return
-            }
-            
-            let responseParser = TCGParser()
-            responseParser.parse(data!)
-            
-            self.items = self.items + responseParser.data.items
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                self.tableView.reloadData()
-            })
-        }
-        
-        task.resume()
-    }
-    
-    func getSCGData(){
-        let task = NSURLSession.sharedSession().dataTaskWithURL(SCGFeed) {(data, response, error) in
-            if data == nil {
-                print("dataTaskWithRequest error: \(error)")
-                return
-            }
-            
-            let responseParser = SCGXMLParser()
-            responseParser.parse(data!)
-            
-            self.items = self.items + responseParser.data.items
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                self.tableView.reloadData()
-            })
-        }
-        
-        task.resume()
-    }
-    
-    func getCHFBData() {
-        let task = NSURLSession.sharedSession().dataTaskWithURL(CHFBFeed) {(data, response, error) in
-            if data == nil {
-                print("dataTaskWithRequest error: \(error)")
-                return
-            }
-            
-            let responseParser = CHFBXMLParser()
-            responseParser.parse(data!)
-            
-            self.items = self.items + responseParser.data.items
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                self.tableView.reloadData()
-            })
-        }
-        
-        task.resume()
-    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count

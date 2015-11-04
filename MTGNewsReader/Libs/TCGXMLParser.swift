@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TCGParser: NSObject, NSXMLParserDelegate {
+class TCGXMLParser: DefaultXMLParser, NSXMLParserDelegate {
     
     let item : String = "item"
     // item values
@@ -20,9 +20,9 @@ class TCGParser: NSObject, NSXMLParserDelegate {
     var element : String = ""
     
     var currentItem : TCGItem? = nil
-    var data : TCGChanell = TCGChanell()
     
-    func parse(response : NSData){
+    override func parse(response : NSData){
+        self.data = TCGChanell()
         let parser : NSXMLParser = NSXMLParser(data: response)
         parser.delegate = self
         parser.parse()
@@ -38,7 +38,7 @@ class TCGParser: NSObject, NSXMLParserDelegate {
         
         if elementName == item {
             if currentItem != nil {
-                data.items.append(currentItem!)
+                data!.items.append(currentItem!)
             }
             
             currentItem = TCGItem()

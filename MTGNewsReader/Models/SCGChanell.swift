@@ -8,9 +8,8 @@
 
 import UIKit
 
-class SCGChanell: NSObject {
+class SCGChanell: DefaultChanell {
 
-    var items : [SCGItem] = []
     var lastBuildDate : NSDate?
     
 }

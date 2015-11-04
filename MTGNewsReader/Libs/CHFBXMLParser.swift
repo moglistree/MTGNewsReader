@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CHFBXMLParser: NSObject, NSXMLParserDelegate {
+class CHFBXMLParser: DefaultXMLParser, NSXMLParserDelegate {
     
     let item : String = "item"
     // item values
@@ -26,9 +26,9 @@ class CHFBXMLParser: NSObject, NSXMLParserDelegate {
     var element : String = ""
     
     var currentItem : CHFBItem? = nil
-    var data : CHFBChannell = CHFBChannell()
     
-    func parse(response : NSData){
+    override func parse(response : NSData){
+        self.data = CHFBChannell()
         let parser : NSXMLParser = NSXMLParser(data: response)
         parser.delegate = self
         parser.parse()
@@ -44,7 +44,7 @@ class CHFBXMLParser: NSObject, NSXMLParserDelegate {
         
         if elementName == item {
             if currentItem != nil {
-                data.items.append(currentItem!)
+                data!.items.append(currentItem!)
             }
             
             currentItem = CHFBItem()

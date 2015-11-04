@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCGXMLParser: NSObject, NSXMLParserDelegate {
+class SCGXMLParser: DefaultXMLParser, NSXMLParserDelegate {
 
     let item : String = "item"
     // item values
@@ -19,9 +19,9 @@ class SCGXMLParser: NSObject, NSXMLParserDelegate {
     var element : String = ""
     
     var currentItem : SCGItem? = nil
-    var data : SCGChanell = SCGChanell()
     
-    func parse(response : NSData){
+    override func parse(response : NSData){
+        self.data = SCGChanell()
         let parser : NSXMLParser = NSXMLParser(data: response)
         parser.delegate = self
         parser.parse()
@@ -37,7 +37,7 @@ class SCGXMLParser: NSObject, NSXMLParserDelegate {
         
         if elementName == item {
             if currentItem != nil {
-                data.items.append(currentItem!)
+                data!.items.append(currentItem!)
             }
             
             currentItem = SCGItem()

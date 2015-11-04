@@ -8,9 +8,8 @@
 
 import UIKit
 
-class TCGChanell: NSObject {
+class TCGChanell: DefaultChanell {
 
-    var items : [TCGItem] = []
     var lastBuildDate : NSDate?
     
 }
