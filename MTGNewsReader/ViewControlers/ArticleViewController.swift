@@ -18,6 +18,29 @@ class ArticleViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadWebView()
+        
+        configureNavigationBar()
+        
+    }
+    
+    func configureNavigationBar(){
+        
+        let sel : Selector = Selector("share")
+        let rightBarButton = UIBarButtonItem(title: "Share", style: .Plain, target: self, action: sel)
+        self.navigationItem.rightBarButtonItem = rightBarButton
+        
+    }
+    
+    func share(){
+        
+        let activityView : UIActivityViewController = UIActivityViewController(activityItems: [item!.linkURL], applicationActivities: nil)
+        
+        self.presentViewController(activityView, animated: true, completion: nil)
+        
+    }
+    
+    func loadWebView(){
         let url : NSURL = NSURL(string: (item?.linkURL)!)!
         let req : NSURLRequest = NSURLRequest(URL : url)
         webView.loadRequest(req)
