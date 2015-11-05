@@ -9,6 +9,8 @@
 import UIKit
 
 class DataStore: NSObject {
+    
+    static let sharedInstance = DataStore()
 
     let CHFBFeed : NSURL = NSURL(string: "http://www.channelfireball.com/feed/")!
     let TCGFeed : NSURL = NSURL(string: "http://www.tcgplayer.com/rss/rssfeed.xml")!

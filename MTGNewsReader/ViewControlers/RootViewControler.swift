@@ -27,8 +27,8 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func getData(){
-        let dataStore = DataStore();
-        dataStore.getHomeScreenData { (items) -> () in
+        
+        DataStore.sharedInstance.getHomeScreenData { (items) -> () in
             self.items = items
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
