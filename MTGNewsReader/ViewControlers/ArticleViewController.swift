@@ -33,8 +33,15 @@ class ArticleViewController: UIViewController, UIWebViewDelegate {
     }
     
     func share(){
-        
-        let activityView : UIActivityViewController = UIActivityViewController(activityItems: [item!.linkURL], applicationActivities: nil)
+    
+        let activityView : UIActivityViewController = UIActivityViewController(activityItems: [item!.linkURL], applicationActivities:nil)
+        var excluded = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList, UIActivityTypeSaveToCameraRoll, UIActivityTypeAssignToContact, UIActivityTypePrint]
+        if #available(iOS 9.0, *) {
+            excluded += [UIActivityTypeOpenInIBooks]
+            activityView.excludedActivityTypes = excluded
+        } else {
+            activityView.excludedActivityTypes = excluded
+        }
         
         self.presentViewController(activityView, animated: true, completion: nil)
         
