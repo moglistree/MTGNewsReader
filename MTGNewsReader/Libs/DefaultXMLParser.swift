@@ -35,8 +35,8 @@ class DefaultXMLParser: NSObject, NSXMLParserDelegate {
             currentItem?.title = (currentItem?.title)! + string
         }
         
-        if element == link {
-            currentItem?.linkURL = (currentItem?.linkURL)! + string
+        if element == link && currentItem?.getURL() == nil{
+            currentItem?.setURL(fromString: string)
         }
         
         if element == desc {

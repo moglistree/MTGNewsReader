@@ -9,6 +9,10 @@
 import UIKit
 
 class FeedCell: UITableViewCell {
+    
+    @IBOutlet weak var lblTitle : UILabel!
+    @IBOutlet weak var lblCreator : UILabel!
+    @IBOutlet weak var lblDescription : UILabel!
 
     var object : DefaultFeedItem! {
         didSet {
@@ -21,10 +25,6 @@ class FeedCell: UITableViewCell {
             //lblDescription.attributedText = getAtributedString(fromHtml: object.desc)
         }
     }
-    
-    @IBOutlet weak var lblTitle : UILabel!
-    @IBOutlet weak var lblCreator : UILabel!
-    @IBOutlet weak var lblDescription : UILabel!
     
     func getAtributedString(fromHtml html: String) -> NSAttributedString?{
         let encodedData = html.dataUsingEncoding(NSUTF8StringEncoding)!

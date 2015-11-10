@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B16A0D51BF28B350032213E /* MTGNewsReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16A0D41BF28B350032213E /* MTGNewsReaderTests.swift */; };
+		5B16A0DD1BF28B7C0032213E /* DefaultFeedItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16A0DC1BF28B7C0032213E /* DefaultFeedItemTests.swift */; };
 		5B176F851BE15DEC00E3953C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B176F841BE15DEC00E3953C /* AppDelegate.swift */; };
 		5B176F8C1BE15DEC00E3953C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B176F8A1BE15DEC00E3953C /* Main.storyboard */; };
 		5B176F8E1BE15DEC00E3953C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B176F8D1BE15DEC00E3953C /* Assets.xcassets */; };
@@ -21,18 +23,32 @@
 		5BBC4AC61BE95017001FFF5E /* TCGXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4AC51BE95017001FFF5E /* TCGXMLParser.swift */; };
 		5BBC4AC91BE9515C001FFF5E /* TCGItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4AC81BE9515C001FFF5E /* TCGItem.swift */; };
 		5BBC4ACB1BE95181001FFF5E /* TCGChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4ACA1BE95181001FFF5E /* TCGChanell.swift */; };
-		5BDA55971BEA328000B06A01 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA55961BEA328000B06A01 /* DataStore.swift */; settings = {ASSET_TAGS = (); }; };
-		5BDA55991BEA3B5000B06A01 /* DefaultXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA55981BEA3B5000B06A01 /* DefaultXMLParser.swift */; settings = {ASSET_TAGS = (); }; };
-		5BDA559B1BEA3BF300B06A01 /* DefaultChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA559A1BEA3BF300B06A01 /* DefaultChanell.swift */; settings = {ASSET_TAGS = (); }; };
+		5BDA55971BEA328000B06A01 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA55961BEA328000B06A01 /* DataStore.swift */; };
+		5BDA55991BEA3B5000B06A01 /* DefaultXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA55981BEA3B5000B06A01 /* DefaultXMLParser.swift */; };
+		5BDA559B1BEA3BF300B06A01 /* DefaultChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA559A1BEA3BF300B06A01 /* DefaultChanell.swift */; };
 		5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */; };
 		5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */; };
 		5BFCCB1D1BE2C3C10000EA69 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */; };
 		5E04167E680E4722EC3C3A7A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CA5C3E9E676245A685E099 /* libPods.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5B16A0D71BF28B350032213E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B176F791BE15DEC00E3953C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B176F801BE15DEC00E3953C;
+			remoteInfo = MTGNewsReader;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		30BB719EE2879178ADD6029D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		38CA5C3E9E676245A685E099 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B16A0D21BF28B350032213E /* MTGNewsReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTGNewsReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B16A0D41BF28B350032213E /* MTGNewsReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGNewsReaderTests.swift; sourceTree = "<group>"; };
+		5B16A0D61BF28B350032213E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B16A0DC1BF28B7C0032213E /* DefaultFeedItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultFeedItemTests.swift; path = "Model Tests/DefaultFeedItemTests.swift"; sourceTree = "<group>"; };
 		5B176F811BE15DEC00E3953C /* MTGNewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTGNewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B176F841BE15DEC00E3953C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B176F8B1BE15DEC00E3953C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B16A0CF1BF28B350032213E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B176F7E1BE15DEC00E3953C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,10 +101,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B16A0D31BF28B350032213E /* MTGNewsReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B16A0DC1BF28B7C0032213E /* DefaultFeedItemTests.swift */,
+				5B16A0D41BF28B350032213E /* MTGNewsReaderTests.swift */,
+				5B16A0D61BF28B350032213E /* Info.plist */,
+			);
+			path = MTGNewsReaderTests;
+			sourceTree = "<group>";
+		};
 		5B176F781BE15DEC00E3953C = {
 			isa = PBXGroup;
 			children = (
 				5B176F831BE15DEC00E3953C /* MTGNewsReader */,
+				5B16A0D31BF28B350032213E /* MTGNewsReaderTests */,
 				5B176F821BE15DEC00E3953C /* Products */,
 				C90223EEB9346509943BC813 /* Pods */,
 				43AAA446A4C83290B568BBE0 /* Frameworks */,
@@ -92,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				5B176F811BE15DEC00E3953C /* MTGNewsReader.app */,
+				5B16A0D21BF28B350032213E /* MTGNewsReaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +243,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B16A0D11BF28B350032213E /* MTGNewsReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B16A0DB1BF28B350032213E /* Build configuration list for PBXNativeTarget "MTGNewsReaderTests" */;
+			buildPhases = (
+				5B16A0CE1BF28B350032213E /* Sources */,
+				5B16A0CF1BF28B350032213E /* Frameworks */,
+				5B16A0D01BF28B350032213E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B16A0D81BF28B350032213E /* PBXTargetDependency */,
+			);
+			name = MTGNewsReaderTests;
+			productName = MTGNewsReaderTests;
+			productReference = 5B16A0D21BF28B350032213E /* MTGNewsReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5B176F801BE15DEC00E3953C /* MTGNewsReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B176F951BE15DEC00E3953C /* Build configuration list for PBXNativeTarget "MTGNewsReader" */;
@@ -237,6 +290,10 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Martin;
 				TargetAttributes = {
+					5B16A0D11BF28B350032213E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 5B176F801BE15DEC00E3953C;
+					};
 					5B176F801BE15DEC00E3953C = {
 						CreatedOnToolsVersion = 7.1;
 					};
@@ -256,11 +313,19 @@
 			projectRoot = "";
 			targets = (
 				5B176F801BE15DEC00E3953C /* MTGNewsReader */,
+				5B16A0D11BF28B350032213E /* MTGNewsReaderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5B16A0D01BF28B350032213E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B176F7F1BE15DEC00E3953C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,6 +372,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B16A0CE1BF28B350032213E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B16A0DD1BF28B7C0032213E /* DefaultFeedItemTests.swift in Sources */,
+				5B16A0D51BF28B350032213E /* MTGNewsReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B176F7D1BE15DEC00E3953C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +407,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5B16A0D81BF28B350032213E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B176F801BE15DEC00E3953C /* MTGNewsReader */;
+			targetProxy = 5B16A0D71BF28B350032213E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		5B176F8A1BE15DEC00E3953C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -353,6 +435,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5B16A0D91BF28B350032213E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MTGNewsReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reader.MTGNewsReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTGNewsReader.app/MTGNewsReader";
+			};
+			name = Debug;
+		};
+		5B16A0DA1BF28B350032213E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MTGNewsReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reader.MTGNewsReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTGNewsReader.app/MTGNewsReader";
+			};
+			name = Release;
+		};
 		5B176F931BE15DEC00E3953C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,6 +569,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B16A0DB1BF28B350032213E /* Build configuration list for PBXNativeTarget "MTGNewsReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B16A0D91BF28B350032213E /* Debug */,
+				5B16A0DA1BF28B350032213E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		5B176F7C1BE15DEC00E3953C /* Build configuration list for PBXProject "MTGNewsReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

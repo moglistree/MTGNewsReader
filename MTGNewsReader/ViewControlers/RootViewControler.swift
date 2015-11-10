@@ -27,12 +27,12 @@ class RootViewControler: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func getData(){
-        let dataStore = DataStore();
-        dataStore.getHomeScreenData { (items) -> () in
-            self.items = items
+        weak var weakSelf = self
+        DataStore.sharedInstance.getHomeScreenData { (items) -> () in
+            weakSelf!.items = items
             dispatch_async(dispatch_get_main_queue(), {
-                self.tableView.reloadData()
-                self.refreshControl.endRefreshing()
+                weakSelf!.tableView.reloadData()
+                weakSelf!.refreshControl.endRefreshing()
             })
         }
     }
