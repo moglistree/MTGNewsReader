@@ -44,6 +44,8 @@ class ArticleViewController: UIViewController, UIWebViewDelegate {
             }
             
             self.presentViewController(activityView, animated: true, completion: nil)
+        } else {
+            showError()
         }
     }
     
