@@ -8,30 +8,19 @@
 
 import UIKit
 
-class CHFBXMLParser: NSObject, NSXMLParserDelegate {
+class CHFBXMLParser: DefaultXMLParser{
     
-    let item : String = "item"
-    // item values
-    let title : String = "title"
-    let link : String = "link"
     let comments : String = "comments"
-    let publicationDate : String = "pubDate"
-    let desc : String = "description"
     let creator : String = "dc:creator"
     let category : String = "category"
     let guid : String = "guid"
     let commentsRss : String = "wfw:commentRss"
     let commentsNumber : String = "slash:comments"
     
-    var element : String = ""
-    
-    var currentItem : CHFBItem? = nil
-    var data : CHFBChannell = CHFBChannell()
-    
-    func parse(response : NSData){
-        let parser : NSXMLParser = NSXMLParser(data: response)
-        parser.delegate = self
-        parser.parse()
+    override func parse(response : NSData){
+        self.data = CHFBChannell()
+        
+        super.parse(response)
     }
     
     func parserDidStartDocument(parser: NSXMLParser) {
@@ -44,7 +33,7 @@ class CHFBXMLParser: NSObject, NSXMLParserDelegate {
         
         if elementName == item {
             if currentItem != nil {
-                data.items.append(currentItem!)
+                data!.items.append(currentItem!)
             }
             
             currentItem = CHFBItem()
@@ -52,38 +41,24 @@ class CHFBXMLParser: NSObject, NSXMLParserDelegate {
         
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
+    override func parser(parser: NSXMLParser, foundCharacters string: String) {
         
         if string == "\n\t\t" || string == "\n\t\t\t" || string == "\n\t\t\t\t"{
             return
         }
         
-        if element == title {
-            currentItem?.title = (currentItem?.title)! + string
-        }
-        
-        if element == link {
-            currentItem?.linkURL = (currentItem?.linkURL)! + string
-        }
+        super.parser(parser, foundCharacters: string)
         
         if element == comments {
-            currentItem?.commentsURL = (currentItem?.commentsURL)! + string
-        }
-        
-        if element == publicationDate {
-            currentItem?.setPublictionDate(fromString: string)
-        }
-        
-        if element == desc {
-            currentItem?.desc = (currentItem?.desc)! + string
+            (currentItem as! CHFBItem).commentsURL = (currentItem as! CHFBItem).commentsURL + string
         }
         
         if element == creator {
-            currentItem?.creator = (currentItem?.creator)! + string
+             currentItem?.creator = (currentItem?.creator)! + string
         }
         
         if element == category {
-            currentItem?.categories.append(string)
+            (currentItem as! CHFBItem).categories.append(string)
         }
         
     }

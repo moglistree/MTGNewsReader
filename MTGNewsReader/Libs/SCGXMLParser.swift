@@ -8,23 +8,14 @@
 
 import UIKit
 
-class SCGXMLParser: NSObject, NSXMLParserDelegate {
-
-    let item : String = "item"
-    // item values
-    let title : String = "title"
-    let link : String = "link"
-    let desc : String = "description"
+class SCGXMLParser: DefaultXMLParser {
     
-    var element : String = ""
+    let creator : String = "creator"
     
-    var currentItem : SCGItem? = nil
-    var data : SCGChanell = SCGChanell()
-    
-    func parse(response : NSData){
-        let parser : NSXMLParser = NSXMLParser(data: response)
-        parser.delegate = self
-        parser.parse()
+    override func parse(response : NSData){
+        self.data = SCGChanell()
+        
+        super.parse(response)
     }
     
     func parserDidStartDocument(parser: NSXMLParser) {
@@ -37,7 +28,7 @@ class SCGXMLParser: NSObject, NSXMLParserDelegate {
         
         if elementName == item {
             if currentItem != nil {
-                data.items.append(currentItem!)
+                data!.items.append(currentItem!)
             }
             
             currentItem = SCGItem()
@@ -45,23 +36,17 @@ class SCGXMLParser: NSObject, NSXMLParserDelegate {
         
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
+    override func parser(parser: NSXMLParser, foundCharacters string: String) {
         
         if string == "\n            "{
             return
         }
         
-        if element == title {
-            currentItem?.title = (currentItem?.title)! + string
+        if element == creator {
+            currentItem?.creator = (currentItem?.creator)! + string
         }
         
-        if element == link {
-            currentItem?.linkURL = (currentItem?.linkURL)! + string
-        }
-        
-        if element == desc {
-            currentItem?.desc = (currentItem?.desc)! + string
-        }
+        super.parser(parser, foundCharacters: string)
         
     }
     

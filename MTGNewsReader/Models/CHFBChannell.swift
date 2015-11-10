@@ -8,9 +8,8 @@
 
 import UIKit
 
-class CHFBChannell : NSObject {
+class CHFBChannell : DefaultChanell {
     
-    var items : [CHFBItem] = []
     var lastBuildDate : NSDate?
     
 }

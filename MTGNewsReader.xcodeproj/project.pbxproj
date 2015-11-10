@@ -18,9 +18,12 @@
 		5B76F0E61BE7F94B004998B7 /* CHFBChannell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0E51BE7F94B004998B7 /* CHFBChannell.swift */; };
 		5B76F0E81BE7FA66004998B7 /* DefaultFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */; };
 		5B76F0EB1BE80486004998B7 /* SCGChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76F0EA1BE80486004998B7 /* SCGChanell.swift */; };
-		5BBC4AC61BE95017001FFF5E /* TCGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4AC51BE95017001FFF5E /* TCGParser.swift */; };
+		5BBC4AC61BE95017001FFF5E /* TCGXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4AC51BE95017001FFF5E /* TCGXMLParser.swift */; };
 		5BBC4AC91BE9515C001FFF5E /* TCGItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4AC81BE9515C001FFF5E /* TCGItem.swift */; };
 		5BBC4ACB1BE95181001FFF5E /* TCGChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC4ACA1BE95181001FFF5E /* TCGChanell.swift */; };
+		5BDA55971BEA328000B06A01 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA55961BEA328000B06A01 /* DataStore.swift */; settings = {ASSET_TAGS = (); }; };
+		5BDA55991BEA3B5000B06A01 /* DefaultXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA55981BEA3B5000B06A01 /* DefaultXMLParser.swift */; settings = {ASSET_TAGS = (); }; };
+		5BDA559B1BEA3BF300B06A01 /* DefaultChanell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA559A1BEA3BF300B06A01 /* DefaultChanell.swift */; settings = {ASSET_TAGS = (); }; };
 		5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */; };
 		5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */; };
 		5BFCCB1D1BE2C3C10000EA69 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */; };
@@ -43,9 +46,12 @@
 		5B76F0E51BE7F94B004998B7 /* CHFBChannell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBChannell.swift; path = Models/CHFBChannell.swift; sourceTree = "<group>"; };
 		5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultFeedItem.swift; path = Models/DefaultFeedItem.swift; sourceTree = "<group>"; };
 		5B76F0EA1BE80486004998B7 /* SCGChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGChanell.swift; path = Models/SCGChanell.swift; sourceTree = "<group>"; };
-		5BBC4AC51BE95017001FFF5E /* TCGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCGParser.swift; path = Libs/TCGParser.swift; sourceTree = "<group>"; };
+		5BBC4AC51BE95017001FFF5E /* TCGXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCGXMLParser.swift; path = Libs/TCGXMLParser.swift; sourceTree = "<group>"; };
 		5BBC4AC81BE9515C001FFF5E /* TCGItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCGItem.swift; path = Models/TCGItem.swift; sourceTree = "<group>"; };
 		5BBC4ACA1BE95181001FFF5E /* TCGChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TCGChanell.swift; path = Models/TCGChanell.swift; sourceTree = "<group>"; };
+		5BDA55961BEA328000B06A01 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = Libs/DataStore.swift; sourceTree = "<group>"; };
+		5BDA55981BEA3B5000B06A01 /* DefaultXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultXMLParser.swift; path = Libs/DefaultXMLParser.swift; sourceTree = "<group>"; };
+		5BDA559A1BEA3BF300B06A01 /* DefaultChanell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultChanell.swift; path = Models/DefaultChanell.swift; sourceTree = "<group>"; };
 		5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCGXMLParser.swift; path = Libs/SCGXMLParser.swift; sourceTree = "<group>"; };
 		5BFCCB181BE2B8DC0000EA69 /* CHFBItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHFBItem.swift; path = Models/CHFBItem.swift; sourceTree = "<group>"; };
 		5BFCCB1C1BE2C3C10000EA69 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = "Custom Views/FeedCell.swift"; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5BDEBA361BE78FA900C0FDC9 /* XMLParsers */,
+				5BDA55961BEA328000B06A01 /* DataStore.swift */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -163,7 +170,8 @@
 			children = (
 				5B176F9C1BE162EC00E3953C /* CHFBXMLParser.swift */,
 				5BDEBA371BE78FF700C0FDC9 /* SCGXMLParser.swift */,
-				5BBC4AC51BE95017001FFF5E /* TCGParser.swift */,
+				5BBC4AC51BE95017001FFF5E /* TCGXMLParser.swift */,
+				5BDA55981BEA3B5000B06A01 /* DefaultXMLParser.swift */,
 			);
 			name = XMLParsers;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 				5B76F0E91BE7FA6A004998B7 /* SCG */,
 				5B76F0E41BE7F933004998B7 /* CHFB */,
 				5B76F0E71BE7FA66004998B7 /* DefaultFeedItem.swift */,
+				5BDA559A1BEA3BF300B06A01 /* DefaultChanell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -306,15 +315,18 @@
 				5B76F0E61BE7F94B004998B7 /* CHFBChannell.swift in Sources */,
 				5B4FB2B41BE6BE1A00CF8DD7 /* ArticleViewController.swift in Sources */,
 				5B176F9A1BE15E7000E3953C /* RootViewControler.swift in Sources */,
+				5BDA55991BEA3B5000B06A01 /* DefaultXMLParser.swift in Sources */,
 				5B176F9D1BE162EC00E3953C /* CHFBXMLParser.swift in Sources */,
 				5B76F0E31BE7F830004998B7 /* SCGItem.swift in Sources */,
 				5BBC4AC91BE9515C001FFF5E /* TCGItem.swift in Sources */,
 				5BDEBA381BE78FF700C0FDC9 /* SCGXMLParser.swift in Sources */,
 				5BFCCB191BE2B8DC0000EA69 /* CHFBItem.swift in Sources */,
 				5B76F0EB1BE80486004998B7 /* SCGChanell.swift in Sources */,
-				5BBC4AC61BE95017001FFF5E /* TCGParser.swift in Sources */,
+				5BBC4AC61BE95017001FFF5E /* TCGXMLParser.swift in Sources */,
 				5B76F0E81BE7FA66004998B7 /* DefaultFeedItem.swift in Sources */,
 				5BBC4ACB1BE95181001FFF5E /* TCGChanell.swift in Sources */,
+				5BDA55971BEA328000B06A01 /* DataStore.swift in Sources */,
+				5BDA559B1BEA3BF300B06A01 /* DefaultChanell.swift in Sources */,
 				5BFCCB1D1BE2C3C10000EA69 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

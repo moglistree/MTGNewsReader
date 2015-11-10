@@ -20,10 +20,19 @@ class DefaultFeedItem: NSObject {
     func setPublictionDate(fromString stringDate : String){
         
         let formater : NSDateFormatter = NSDateFormatter()
-        formater.dateFormat = "EEE, yyyy MM dd HH:mm:ss Z"
+        formater.dateFormat = "EEE, dd MM yyyy HH:mm:ss Z"
         
         self.publicatedDate = formater.dateFromString(stringDate)
         
+        if self.publicatedDate == nil {
+            formater.dateFormat = "EEE, d MM yyyy HH:mm:ss"
+            self.publicatedDate = formater.dateFromString(stringDate)
+        }
+        
+    }
+    
+    func getPublicationDate() -> NSDate{
+        return self.publicatedDate!
     }
     
 }
