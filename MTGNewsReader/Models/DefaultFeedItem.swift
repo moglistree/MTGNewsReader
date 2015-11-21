@@ -49,6 +49,10 @@ class DefaultFeedItem: NSObject {
         return formater.stringFromDate(getPublicationDate()!)
     }
     
+    func getImageName() -> String?{
+        return nil
+    }
+    
     func getPublicationDate() -> NSDate?{
         return self.publicatedDate
     }

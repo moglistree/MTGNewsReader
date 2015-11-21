@@ -44,6 +44,10 @@ class DefaultFeedItemTests: XCTestCase {
         XCTAssertNotNil(item?.getPublicationDate(), "Date should be set when valid string is set")
     }
     
+    func testDefaultImageIsNil(){
+        XCTAssertNil(item?.getImageName(),"Default image should be nil")
+    }
+    
     func testThatItemCanHaveLingUrl(){
         let str = "http://www.channelfireball.com/articles/modern-krark-clan-ironworks/"
         XCTAssertEqual(NSURL(string: str), item?.getURL(), "The item should have the link url i gave it")

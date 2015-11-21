@@ -576,6 +576,7 @@
 				5B16A0DA1BF28B350032213E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B176F7C1BE15DEC00E3953C /* Build configuration list for PBXProject "MTGNewsReader" */ = {
 			isa = XCConfigurationList;

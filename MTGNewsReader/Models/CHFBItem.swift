@@ -13,4 +13,8 @@ class CHFBItem : DefaultFeedItem {
     var commentsURL : String = ""
     var categories : Array<String> = Array()
     
+    override func getImageName() -> String? {
+        return "CHFBLogo"
+    }
+    
 }

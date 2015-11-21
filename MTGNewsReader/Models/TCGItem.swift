@@ -10,4 +10,8 @@ import UIKit
 
 class TCGItem: DefaultFeedItem {
 
+    override func getImageName() -> String? {
+        return "TCGLogo"
+    }
+    
 }

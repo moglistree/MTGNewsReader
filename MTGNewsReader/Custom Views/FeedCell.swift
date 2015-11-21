@@ -15,6 +15,8 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var lblDescription : UILabel!
     @IBOutlet weak var lblDate : UILabel!
 
+    @IBOutlet weak var imgLogo : UIImageView!
+    
     var object : DefaultFeedItem! {
         didSet {
             lblTitle.text = object.title
@@ -28,9 +30,16 @@ class FeedCell: UITableViewCell {
             if object.getPublicationDate() != nil {
                 lblDate.text = object.getDateForCell()!
             }
-
+            
+            if object.getImageName() != nil {
+                imgLogo.image = UIImage(named: (object.getImageName()!))
+            }
             //lblDescription.attributedText = getAtributedString(fromHtml: object.desc)
         }
+    }
+    
+    override func prepareForReuse() {
+        imgLogo.image = nil
     }
     
     func getAtributedString(fromHtml html: String) -> NSAttributedString?{

@@ -10,4 +10,8 @@ import UIKit
 
 class SCGItem : DefaultFeedItem {
     
+    override func getImageName() -> String? {
+        return "SCGLogo"
+    }
+    
 }
