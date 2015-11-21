@@ -9,7 +9,8 @@
 import UIKit
 
 class DefaultChanell: NSObject {
-
+    
+    var lastBuildDate : NSDate?
     var items : [DefaultFeedItem] = []
     
 }

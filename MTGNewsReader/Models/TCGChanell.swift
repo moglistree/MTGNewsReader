@@ -9,7 +9,5 @@
 import UIKit
 
 class TCGChanell: DefaultChanell {
-
-    var lastBuildDate : NSDate?
     
 }
