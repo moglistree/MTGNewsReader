@@ -43,8 +43,14 @@ class DefaultFeedItem: NSObject {
         
     }
     
-    func getPublicationDate() -> NSDate{
-        return self.publicatedDate!
+    func getDateForCell() -> String?{
+        let formater : NSDateFormatter = NSDateFormatter()
+        formater.dateFormat = "dd/MM/yyyy"
+        return formater.stringFromDate(getPublicationDate()!)
+    }
+    
+    func getPublicationDate() -> NSDate?{
+        return self.publicatedDate
     }
     
     func getURL () -> NSURL?{

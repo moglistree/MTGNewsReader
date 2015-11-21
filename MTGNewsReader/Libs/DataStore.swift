@@ -49,8 +49,8 @@ class DataStore: NSObject {
     private func sortItemsByDate(items : [DefaultFeedItem]) -> [DefaultFeedItem]{
         let sortedItems : [DefaultFeedItem] = items.sort {
             var isGreater = false
-            let fisrtDate : NSDate = ($0 as DefaultFeedItem).getPublicationDate()
-            let secondDate : NSDate = ($1 as DefaultFeedItem).getPublicationDate()
+            let fisrtDate : NSDate = ($0 as DefaultFeedItem).getPublicationDate()!
+            let secondDate : NSDate = ($1 as DefaultFeedItem).getPublicationDate()!
             
             if fisrtDate.compare(secondDate) == NSComparisonResult.OrderedDescending
             {

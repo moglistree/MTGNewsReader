@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WlJ-CE-esI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WlJ-CE-esI">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -60,11 +60,18 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUl-zq-JZr">
-                                                    <rect key="frame" x="12" y="55" width="576" height="21"/>
+                                                    <rect key="frame" x="12" y="55" width="576" height="10"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                </label>
+                                                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtU-t6-ImH" userLabel="Lbl Date">
+                                                    <rect key="frame" x="12" y="69" width="576" height="10"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,12 +83,16 @@
                                                 <constraint firstItem="eUl-zq-JZr" firstAttribute="top" secondItem="2zh-hb-Q9p" secondAttribute="bottom" constant="2" id="ANQ-mb-39m"/>
                                                 <constraint firstItem="lIG-cb-13A" firstAttribute="leading" secondItem="OJU-2B-u5P" secondAttribute="leadingMargin" constant="12" id="C8h-ke-1zf"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2zh-hb-Q9p" secondAttribute="trailing" constant="538" id="CSr-Hs-rqB"/>
+                                                <constraint firstItem="DtU-t6-ImH" firstAttribute="leading" secondItem="OJU-2B-u5P" secondAttribute="leading" constant="12" id="DVf-A2-xOE"/>
+                                                <constraint firstAttribute="trailing" secondItem="DtU-t6-ImH" secondAttribute="trailing" constant="12" id="KiE-88-QBy"/>
                                                 <constraint firstAttribute="bottom" secondItem="eUl-zq-JZr" secondAttribute="bottom" constant="2" id="MFQ-aV-rai"/>
                                                 <constraint firstAttribute="trailing" secondItem="lIG-cb-13A" secondAttribute="trailing" constant="12" id="RFZ-Mz-0A8"/>
                                                 <constraint firstItem="lIG-cb-13A" firstAttribute="top" secondItem="OJU-2B-u5P" secondAttribute="topMargin" constant="3" id="TCI-6p-fYe"/>
+                                                <constraint firstAttribute="bottom" secondItem="DtU-t6-ImH" secondAttribute="bottom" constant="2" id="WQH-Se-NyW"/>
                                                 <constraint firstItem="eUl-zq-JZr" firstAttribute="leading" secondItem="OJU-2B-u5P" secondAttribute="leading" constant="12" id="Wgl-2N-8tv"/>
                                                 <constraint firstItem="lIG-cb-13A" firstAttribute="leading" secondItem="OJU-2B-u5P" secondAttribute="leading" constant="12" id="YpC-an-y5L"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lIG-cb-13A" secondAttribute="trailing" constant="12" id="ZVE-9r-fHw"/>
+                                                <constraint firstItem="DtU-t6-ImH" firstAttribute="top" secondItem="eUl-zq-JZr" secondAttribute="bottom" constant="2" id="cjX-E5-0RG"/>
                                                 <constraint firstAttribute="trailing" secondItem="2zh-hb-Q9p" secondAttribute="trailing" constant="12" id="kVL-qT-Q9i"/>
                                                 <constraint firstItem="2zh-hb-Q9p" firstAttribute="leading" secondItem="OJU-2B-u5P" secondAttribute="leading" constant="12" id="qYW-RO-2yU"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="lIG-cb-13A" secondAttribute="bottom" constant="3" id="sfJ-LH-ozj"/>
@@ -96,12 +107,14 @@
                                                     <exclude reference="z7q-px-sWa"/>
                                                     <exclude reference="6om-mE-Ydu"/>
                                                     <exclude reference="CSr-Hs-rqB"/>
+                                                    <exclude reference="MFQ-aV-rai"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="lblCreator" destination="2zh-hb-Q9p" id="WW4-GI-KNi"/>
+                                            <outlet property="lblDate" destination="DtU-t6-ImH" id="DJS-Gg-60E"/>
                                             <outlet property="lblDescription" destination="eUl-zq-JZr" id="2Xw-5I-GNv"/>
                                             <outlet property="lblTitle" destination="lIG-cb-13A" id="cM3-Ci-bpU"/>
                                         </connections>

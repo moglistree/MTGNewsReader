@@ -13,6 +13,7 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var lblTitle : UILabel!
     @IBOutlet weak var lblCreator : UILabel!
     @IBOutlet weak var lblDescription : UILabel!
+    @IBOutlet weak var lblDate : UILabel!
 
     var object : DefaultFeedItem! {
         didSet {
@@ -22,6 +23,11 @@ class FeedCell: UITableViewCell {
             } else {
                 lblCreator.text = ""
             }
+            
+            if object.getPublicationDate() != nil {
+                lblDate.text = object.getDateForCell()!
+            }
+
             //lblDescription.attributedText = getAtributedString(fromHtml: object.desc)
         }
     }
