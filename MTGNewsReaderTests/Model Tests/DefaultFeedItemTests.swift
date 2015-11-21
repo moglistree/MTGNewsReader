@@ -20,6 +20,7 @@ class DefaultFeedItemTests: XCTestCase {
         item?.creator = "John Doe"
         item?.desc = "New Description"
         item?.setURL(fromString: "http://www.channelfireball.com/articles/modern-krark-clan-ironworks/")
+        item?.setPublictionDate(fromString: "Sat, 21 Nov 2015 05:00:27 +0000")
     }
     
     func testThatDefaultFeedItemExists() {
@@ -39,6 +40,10 @@ class DefaultFeedItemTests: XCTestCase {
         XCTAssertEqual("New Description", item?.desc, "The item should have the description i gave it")
     }
     
+    func testDateCanBeSetFromString(){
+        XCTAssertNotNil(item?.getPublicationDate(), "Date should be set when valid string is set")
+    }
+    
     func testThatItemCanHaveLingUrl(){
         let str = "http://www.channelfireball.com/articles/modern-krark-clan-ironworks/"
         XCTAssertEqual(NSURL(string: str), item?.getURL(), "The item should have the link url i gave it")
@@ -49,13 +54,9 @@ class DefaultFeedItemTests: XCTestCase {
         XCTAssertNil(item?.getURL(), "When link URL is invalid value should be nil")
     }
     
-    func testDateCanBeSetFromString(){
-//        let date = NSDate()
-//        let dateFormater = NSDateFormatter()
-//        dateFormater.dateFromString("EEE, dd MM yyyy HH:mm:ss Z");
-//        let dateString =  dateFormater.stringFromDate(date)
-//        item?.setPublictionDate(fromString: dateString)
-//        XCTAssertEqual(date, item?.getPublicationDate(), "date converter not working aproprietly")
+    func testDateSetInvalidString(){
+        item?.setPublictionDate(fromString: "Invalid string")
+        XCTAssertNil(item?.getPublicationDate(), "nil expected when invalid string is set")
     }
     
     override func tearDown() {

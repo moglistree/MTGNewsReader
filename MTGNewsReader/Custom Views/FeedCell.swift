@@ -18,6 +18,7 @@ class FeedCell: UITableViewCell {
     var object : DefaultFeedItem! {
         didSet {
             lblTitle.text = object.title
+            
             if object.creator != "" {
                 lblCreator.text = "By: " + object.creator
             } else {
